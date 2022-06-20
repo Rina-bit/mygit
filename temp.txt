@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+    
+<hibernate-configuration>
+<session-factory>
+	<property name="hbm2ddl.auto">update</property>
+    <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/cdac</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">12345678</property>
+    <property name="connnection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="show_sql">true</property>
+    <property name="current_session_context_class">thread</property>
+    <mapping class="com.app.bean.Employee"/>
+</session-factory>
+</hibernate-configuration>
+
+----------------------------------------------------------
+
+
+package com.app.bean;
+
+import java.io.Serializable;
+
+Hello
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="emp3")
+public class Employee implements Serializable{
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="empId")
+	private int id;
+	
+	@Column(name="empName")
+	private String name;
+	
+	@Column(name="empPassword")
+	private String password;
+	
+	@Column(name="empEmail")
+	private String email;
+	
+	public Employee() {}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", password=" + password + ", email=" + email + "]";
+	}
+}
+
+
+-------------------------------------------------------------------
+
+
+package com.app.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.app.bean.Employee;
+
+public class EmployeeDao {
+	public static int register(Employee e)
+	{
+		int i=0;
+		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Employee.class).buildSessionFactory();
+		
+		Session session = factory.getCurrentSession();
+		session.beginTransaction();
+		i = (int) session.save(e);
+		session.getTransaction().commit();
+		return i;
+	}
+}
