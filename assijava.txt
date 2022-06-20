@@ -1,0 +1,500 @@
+30. Create a class to calculate Area of circle with one data member to store the radius and another to store area value.
+ Create method members   
+1. init - to input radius from user   
+2. calc - to calculate area   
+3. display- to display area
+
+
+
+31.	Create a class MathOperation with two data member X and Y to store the operand 
+   and third data member R to store result of operation.
+   Create method members
+●	init - to input X and Y from user
+●	add - to add X and Y and store in R
+●	multiply - to multiply X and Y and store in R
+●	power - to calculate X Y and store in R
+●	display- to display Result R
+
+
+
+35.	Create a class Employee  with(empNo ,salary and totalSalary) ) with following features.
+a.	Only parameterized constructor;
+b.	totalSalary always represent total of all the salaries of all employees created.
+c.	empNo should be auto incremented. 
+d.	display total employees and totalSalary using class method.
+
+
+
+
+eclipse version oxysion : https://www.eclipse.org/downloads/packages/release/oxygen/3a
+
+
+36.	Create class Product (pid, price, quantity) with parameterized constructor. 
+
+Create a main function in different class (say XYZ) and perform following task:
+a.	Accept five product information from user and store in an array
+b.	 Find Pid of product with highest price.
+c.	Create method (with array of product’s object as argument) 
+in XYZ class to calculate and return total amount spent on all products.  
+(amount spent on single product=price of product * quantity of product)
+
+
+41.	Create three classes 
+	Faculty (facultyid, salary)
+	FullTimeFaculty (basic, allowance) inherits class Faculty
+	PartTimeFaculty (hour, rate) inherits class Faculty
+
+Create a method for accepting input in FullTimeFaculty and PartTimeFaculty,  
+but salary should not be accepted. Salary is calculated on the basis of  (basic+allowance) 
+for FullTimeFaculty and (hour*rate) for PartTimeFaculty. Also create method in above classes to display faculty data.
+
+Create another class(say XYZ) for main method and store 2 fulltime and 2 parttime faculty information. Also print their details.
+
+
+40.	Create class OneBHK with instance variable roomArea , hallArea and price
+a.	Create default and parameterized constructor;
+b.	Method show(): to print OneBHK data member information;
+Create another class TwoBHK which has all the properties and behaviour of OneBHK and a new instance variable room2Area.
+a.	Create default and parameterized constructor;
+b.	Method show(): to print all data member information;
+Write main function in another class(Say XYZ) and store three TwoBHK flat’s information  
+and print  information using show method. Also print total amount of all flats.
+
+
+Create an Abstract class Processor with int member variable data  and method showData to display data value. 
+Create abstract method process() to define processing of member data. 
+a.	Create a class  Factorial using abstract class Processor  
+to calculate and print factorial of a number by overriding the process method.
+b.	Create a class  Circle using abstract class Processor  
+to calculate and print area of a circle by overriding the process method
+ Ask user to enter choice (factorial or circle area).  
+Also ask data to work upon; Use Processor class reference to achieve this mechanism
+
+
+For notes : javadecode.com
+
+
+46.	Explain the importance of toString() and equals() method of the Object 
+class and override them on class Employee(empId,name,salary). 
+a.	Create class for main method(say XYZ),and accept five employees information and 
+store in an array. Also ensure if entered empId already exist or not (use equals method). 
+b.	Display all employee info using toString method;						
+
+
+53.	 Create a class Voter(voterId, name, age) with parameterized constructor.  
+The parameterized constructor should throw a checked exception if age is 
+
+less than 18. The message of exception is “invalid age for voter ”
+
+54.	Create Interface StudentFee and declare following method.  
+getFee() throws InvalidFeeException. This method ask fees from user and throws 
+exception if user enters invalid or negative fees
+Create class Student with members (name, fees) and implement the StudentFee Interface
+
+
+Create Interface Taxable with members salesTax=7% and incomeTax=10.5%. create abstract method calcTax().
+a.	Create class Employee(empId,name,salary) and implement Taxable to calculate incomeTax on yearly salary.
+b.	Create class Product(pid,price,quantity) and implement Taxable to calculate salesTax on unit price of product.
+c.	Create class for main method(Say XYZ), accept employee information and a product information from user and print 
+	income tax and sales tax respectively.
+
+
+47.	Create a program that helps banks to maintain records. It should have 
+following facilities.
+o	Anybody can create current or saving account with following initial information: account number, name, balance, and branch.
+o	display account detail for a particular accounts.
+o	display total money deposited in bank.
+o	allow deposit and  withdrawal in an account  .
+o	for saving account opening balance and minimum balance must be 5000.
+o	for current account opening balance and minimum balance must be 1000.
+o	can not withdraw the amount from the account that makes balance less than
+the minimum balance.
+
+-------------------------------------------------------------------------------------------------------------
+Create a class Student with two members  : rollno and percentage.
+
+Create default and parameterized constructors. Create method show() to display information.
+Create another class CollegeStudent inherits  Student class. Add a new member semester to it. 
+Create default and parameterized constructors. Also override show() method.
+
+Create another class SchoolStudent inherits  Student class. 
+Add a new member classname(eg 12th ,10th  etc.)  to it. Create default and parameterized constructors. Also override show() method.
+
+Create a class(say XYZ) with main method that carries out the operation of the project :
+-- has array to store objects of any class(Student or CollegeStudent, SchoolStudent)
+--create two CollegeStudent  and three SchoolStudent record objects and store them inside the array
+-- display all record from the array
+-- search record on the basic of rollno and check given rollno is of SchoolStudent or of CollegeStudent.
+--count how many students are having A grade,  if for A grade percentage >75
+
+
+Create a following class/package structure in your application.  Filled squares are packages and empty circles are classes.
+▪️	campus.data
+o	Person (name, age, address)
+▪️	campus.academics
+o	Student(rollno, branch, semester) inherits Person
+o	Faculty(facultyId, name, salary, branch)  inherits Person
+▪️	campus
+o	CampusApp- this class contains main method to accept 5 Faculty information and print total of salaries of all faculties.
+
+
+50.	Input name of a person and count how many vowels it contains.  Use String class functions.
+
+51.	Input data exactly in the following format, and print sum of all integer values.
+“67, 89, 23, 67, 12, 55, 66”.   (Hint use String class split method and Integer class parseInt method)
+
+
+64.	Create a Thread class to print following star(*) pattern on screen with delay of 1 second between each * print. 
+Number of lines in the pattern should be passed to the constructor of Thread class. 
+* * * * *
+* * * *
+* * *
+* *
+*
+Use this class in main method and ask user to enter number of lines to print
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+33.	Create a class Person with properties (name and age) with following features.
+a.	Default  age of person should be 18;
+b.	A person object can be initialized with name and age;
+c.	Method to display name and age of person
+
+
+Create class Tile to store the edge length of a square tile , and  create another  class Floor to store length and width of a rectangular floor.  
+Add method totalTiles(Tile t) in Floor class with Tile as argument to calculate the whole number of tiles needed to cover the floor completely.
+
+
+51.	Input data exactly in the following format, and print sum of all integer values.
+“67, 89, 23, 67, 12, 55, 66”.   (Hint use String class split method and Integer class parseInt method)
+
+
+52.	Store name of weekdays in an array (starting from “Sunday” at 0 index). Ask day position from user and print day name. 
+Handle array index out of bound exception and give proper message if user enter day index outside range (0-6).
+
+
+50.	Input name of a person and count how many vowels it contains.  Use String class functions.
+
+
+68.	Write a program to count how many times character ‘t’ occurs in a file.
+69.	Write a program to count no of words in a text file and average word size.
+
+
+
+[12:52 PM, 5/5/2022] +91 91685 47276: import java.io.IOException;
+import java.util.Scanner;
+
+public class CountT {
+
+	    public static void main(String[] args)
+	        throws IOException
+	    {
+	    	Scanner s = new Scanner(System.in);
+	    	System.out.println("Enter person name :-");
+	    	String str= s.nextLine();
+	        
+	        str = str.toLowerCase();
+	        int count = 0;
+	 
+	        for (int i = 0; i < str.length(); i++) {
+	            // check if char[i] is vowel
+	            if (str.charAt(i) == 't' 
+	            	)
+	            {
+	                count++;
+	            }
+	        }
+	 
+	        
+	        System.out.println(
+	            "Total no of t in string are: " + count);
+	    }
+	}
+[12:52 PM, 5/5/2022] +91 91685 47276: import java.util.Scanner;
+public class SundayIndex 
+{
+
+
+
+		public static void main(String[] args) throws Exception {
+			Scanner sc=new Scanner(System.in);
+			String str2[]= {"Sun","Tue","Wed","Thur","Fri","Sat","Mon"};
+			System.out.println("Enter the day of week 0-6 :");
+			int a=sc.nextInt();
+			for(int i=0;i<str2.length;i++)
+			{
+				if(i==(a-1))
+				{
+					System.out.print(str2[i]);
+					break;
+				}
+			}
+			throw new Exception("Out of bond value enter range beetween 0-6");
+
+		}
+
+	}
+[12:52 PM, 5/5/2022] +91 91685 47276: import java.io.BufferedReader;  
+import java.io.FileReader;  
+public class CountWords 
+{
+   
+    public static void main(String[] args) throws Exception {  
+        String line;  
+        int count = 0;  
+          
+       
+        FileReader file = new FileReader("D:\\CDAC\\java\\workspace Oxy\\AssignmentSession16\\src\\data.txt");  
+        BufferedReader br = new BufferedReader(file);  
+              
+        //to read line till end of file is reached	  
+        while((line = br.readLine()) != null) {  
+            
+        	//change line
+        	
+            String words[] = line.split(" ");  
+            
+            
+            //count
+            count = count + words.length;  
+        }  
+          
+        System.out.println("Number of words in given file: " + count);  
+        br.close();  
+    
+    }
+}
+
+
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class CountT {
+
+	    public static void main(String[] args)
+	        throws IOException
+	    {
+	    	Scanner s = new Scanner(System.in);
+	    	System.out.println("Enter person name :-");
+	    	String str= s.nextLine();
+	        
+	        str = str.toLowerCase();
+	        int count = 0;
+	 
+	        for (int i = 0; i < str.length(); i++) {
+	            // check if char[i] is vowel
+	            if (str.charAt(i) == 't' 
+	            	)
+	            {
+	                count++;
+	            }
+	        }
+	 
+	        
+	        System.out.println(
+	            "Total no of t in string are: " + count);
+	    }
+	}
+
+
+import java.io.BufferedReader;  
+import java.io.FileReader;  
+public class CountWords 
+{
+   
+    public static void main(String[] args) throws Exception {  
+        String line;  
+        int count = 0;  
+          
+       
+        FileReader file = new FileReader("D:\\CDAC\\java\\workspace Oxy\\AssignmentSession16\\src\\data.txt");  
+        BufferedReader br = new BufferedReader(file);  
+              
+        //to read line till end of file is reached	  
+        while((line = br.readLine()) != null) {  
+            
+        	//change line
+        	
+            String words[] = line.split(" ");  
+            
+            
+            //count
+            count = count + words.length;  
+        }  
+          
+        System.out.println("Number of words in given file: " + count);  
+        br.close();  
+    
+    }
+}
+
+
+import java.util.Scanner;
+
+public class Person {
+	
+	private String name;
+	int age ;
+	
+	/*public Person(String name)
+	{
+		this.name= name;
+		
+	}*/
+	
+	public Person(String name,int age)
+	{
+		this.name= name;
+		if(age>=1)
+		{
+			this.age= age;
+		}
+		else
+		{
+			this.age = 18;
+		}
+	}
+	
+	
+	public void display()
+	{
+		System.out.println("--------------------");
+		System.out.println("Name of Person : "+name);
+		System.out.println("Age : "+age);
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
+		int n;
+		System.out.println("Enter the number of persons : ");
+		n = s.nextInt();
+		
+		Person p[] = new Person[n];
+		
+		for(int i =0; i<n;i++)
+		{
+			System.out.println("Enter Name of Person : ");
+			String name = s.next();
+			
+			System.out.println("Enter age if u want enter default age enter 0 : ");
+			int age = s.nextInt();
+			
+			//p[i] = new Person(name);
+			p[i]= new Person(name,age);
+		}
+		for(int i =0; i<n;i++)
+		{
+			p[i].display();
+		}
+			
+	}
+}
+
+
+
+package NewAssign;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class NoOfToccurINaFile
+{
+	 public static void main(String[] args)throws IOException
+	    {
+
+	        String file = "d:\\def.txt";
+	        String line = "";
+	        Scanner sc = new Scanner(new FileReader(file));
+	        try {
+	            while ( sc.hasNextLine())
+	            {
+	            line = sc.nextLine();
+	            int count = 0;
+
+	            for( int i=0; i<line.length(); i++ )
+	            {
+	                if( line.charAt(i) == 't' ) 
+	                {
+	                    count++; 
+	                }
+	            }
+	             System.out.println(count);   
+	          }
+	        }
+	        finally {
+	                 sc.close();
+	                }
+	        }
+}
+
+
+import java.io.BufferedReader;  
+import java.io.FileReader;
+import java.util.Scanner;
+import java.io.File;
+public class CountWords 
+{
+   
+    public static void main(String[] args) throws Exception {  
+        String line;  
+        int count = 0;  
+        long size;
+        double sum=0;double av=0;int cou=0;
+        
+        String path;
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the path of file");
+        path =s.nextLine();
+        
+        FileReader file = new FileReader(path);  
+        BufferedReader br = new BufferedReader(file);  
+              
+        //to read line till end of file is reached	  
+        while((line = br.readLine()) != null) {  
+            
+        	//change line
+        	
+            String words[] = line.split(" ");  
+            
+            
+            //count
+            count = count + words.length;  
+            
+            
+          
+            String c[]=line.split(" ");
+            for(String word:c){
+                int wordlen=word.length();
+               sum=sum+wordlen;
+               cou++;
+            }
+            av=Math.round((double)(sum/count));
+         
+            
+            
+        }  
+         
+        System.out.println("Number of words in given file: " + count);
+        size = path.length();
+        System.out.println("Avrg Word Size is :- "+(int)av);
+        size = path.length();
+        
+        System.out.println("File Size is :- "+size+"Bytes");
+        br.close();  
+    
+    }
+
+	private static long getFileSize(String path) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	private static long getFilesSize(String path) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
